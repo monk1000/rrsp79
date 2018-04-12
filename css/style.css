@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900|Open+Sans+Condensed:300,700&subset=latin-ext');
+
+body {
+	box-sizing: border-box;
+	background-image: url(../images/background1.png);
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	overflow-x: hidden;
+}
+
+.container {
+	width: 1200px;
+	margin: 50px auto;
+	display: flex;
+}
+
+header {
+	height: 25vh;
+	background-color: #001238;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+h1, h2, h4 {
+	margin: 0;
+	padding: 5px 0;
+}
+
+h1 {
+	font-family: Lato, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+	color: #F7F7F7;
+
+}
+
+h2 {
+	font-family: Lato, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	color: #F7F7F7;
+}
+
+h4 {
+	font-family: Lato, sans-serif;
+    letter-spacing: 1px;
+	color: #F7F7F7;
+}
+
+h5 {
+	font-family: Lato, sans-serif;
+	font-size: 0.6em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	color: #F7F7F7;
+	margin: 10px 0;
+}
+
+section {
+	width: 100%;
+}
+
+p {
+	padding: 20px;
+
+}
+
+.main{
+	position: absolute;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.contentbackground {
+	position: relative;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 75vh;
+    background-image: url(../images/background1.png);
+   	-webkit-transition: all 0.35s ease-in-out;
+  	-moz-transition: all 0.35s ease-in-out;
+  	transition: all 0.35s ease-in-out;
+}
+
+/*----------------------VERTICAL mENU----------------------*/
+
+.verticalmenu {
+	position: absolute;
+    top: 25vh;
+    left: -10%;
+    width: 10%;
+    height: auto;
+    background-color: #cecdcb96;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    z-index: 10;
+}
+
+.icons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menuicon	{
+	background-color: #1abc9c;
+	width: 100%;
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menuicon:hover .icon {
+  	-webkit-transform: rotateY(180deg);
+  	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+
+/*----------------------BUTTONS----------------------*/
+
+.news {	
+	background-color: #1abc9c;
+}
+
+.crew {
+	background-color: #3498db;
+}
+
+.projects {
+	background-color: #34495e;
+}
+
+.funds {
+	background-color: #f1c40f;
+}
+
+.insurance {
+	background-color: #e74c3c;
+}
+
+.download {
+	background-color: #982cc7;
+}
+
+.contact {
+	background-color: #d35400;
+}
+
+.btn {
+	padding: 10px;
+    width: 250px;
+    height: 250px;
+    margin: 10px 10px;
+    font-family: Lato black, sans-serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 0.35s ease-in-out;
+  	-moz-transition: all 0.35s ease-in-out;
+  	transition: all 0.35s ease-in-out;
+  	border: none;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.btn:focus {
+	outline: none;
+	background: #80808054;
+    color: #616161;
+}
+
+.icon {
+	-webkit-transition: all 0.45s ease-in-out;
+  	-moz-transition: all 0.45s ease-in-out;
+  	transition: all 0.45s ease-in-out;
+}
+
+.btn:hover .icon {
+  	-webkit-transform: rotateY(180deg);
+  	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+
+/*----------------------FOOTER----------------------*/
+
+footer {
+	width: 100%;
+	position: absolute;
+	padding: 10px 0;
+	text-align: center;
+	background-color: rgba(30, 30, 30, 0.2);
+}
+
+footer p {
+	font-family: Lato, sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+
+.resize {
+	width: 100%;
+	-webkit-transition: all 2s ease-in-out;
+  	-moz-transition: all 2s ease-in-out;
+  	transition: all 2s ease-in-out;
+}
+
+.newscontent {
+	flex: 1;
+}
+
