@@ -36,12 +36,27 @@ body {
 	}
 }
 
+.fadein {
+	animation: fadeIn .4s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 header {
 	height: 20vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: left;
+	position: relative;
 }
 
 .headerpic {
@@ -114,15 +129,14 @@ p {
 	padding: 30px 0;
 }
 
+/*----------------------BUTTONS----------------------*/
+
 .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
-
-/*----------------------BUTTONS----------------------*/
 
 .news {	
 	background: #969696; /* fallback for old browsers */
@@ -244,67 +258,163 @@ p {
 	margin: 7vh auto;
 }
 
-.menuicon h5 {
+.menubtn h5 {
 	font-size: 0.8em;
 	letter-spacing: 2px;
 }
 
-.menuicon:hover .icon{
-  	-webkit-transform: rotateY(180deg);
-  	-moz-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
-
 /*----------------------CONTENT----------------------*/
 
-.contentbackground {
+.contenttitle h1{
+	margin: 48px 0 48px 0;
+	color: #777777;
+}
+
+.contentnews, .contentcrew, .contentprojects, .contentfunds, .contentinsurance, .contentdownload {
 	display: none;
-    background-color: #45345353;
-    -webkit-transition: all 0.4s ease-in-out;
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+	-webkit-transition: all 0.4s ease-in-out;
   	-moz-transition: all 0.4s ease-in-out;
   	transition: all 0.4s ease-in-out;
+  	position: absolute;
+  	top: 258px;
 }
 
-.contentbackground .container {
-	margin-top: 0;
+
+/*----------------------CONTENT - NEWS ----------------------*/
+/*----------------------CONTENT - CREW ----------------------*/
+
+.contentcrew .container {
+	flex-direction: column;	
 }
 
-.newstxt {
-	width: 90%;
-    word-wrap: break-word;
+.people {
+	display: flex;
 }
 
-.txt {
-	width: 80%;
-    min-height: 75vh;
-    text-align: justify;
+.personbox {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+    flex: 1;
+    border: 1px solid #e8e8e8;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2%;
+    padding: 20px 0;
+    box-shadow: 0px 3px 7px #cacaca;
 }
 
-.txt h1 {
-    font-family: Opensans, sans-serif;
-    color: #333333;
-    font-size: 1.5em;
-    margin: 0 100px;
+.avatar {
+    margin: 18px 0;
+    background-position: center 0;
+    background-repeat: no-repeat;
 }
 
-.txt h2 {
-    font-family: Opensans, sans-serif;
-    color: #333333;
-    font-size: 1.2em;
-    margin: 0 100px;
+.personbox figcaption {
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 1.1em;
+	letter-spacing: 1px;
 }
 
-.txt p {
-	font-family: Opensans, sans-serif;
-    color: #333333;
-    font-size: 0.9em;
-    line-height: 23px;
-    padding: 20px 100px;
+.personbox .personaldata {
+	display: flex;
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 0.9em;
+	letter-spacing: 1px;
 }
 
-.hidden {
+.personbox .personaldata h3 {
+	padding: 0 5px;
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+/*----------------------CONTENT - PROJECTS ----------------------*/
+/*----------------------CONTENT - FUNDS ----------------------*/
+
+.contentfunds {
 	display: none;
+	height: auto;
+	flex-direction: column;
 }
+
+.contentfunds .container {
+	flex-direction: column;	
+}
+
+.fundsdata {
+	display: flex;
+}
+
+.fundshigh, .transferdata {
+	flex: 1;
+	padding: 0 40px;
+}
+
+.fundsdata ul {
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+}
+
+.fundsdata ul li {
+	line-height: 32px;
+}
+
+.transferdata {
+
+}
+
+.transferdata h2, .fundsdata h2 {
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+}
+
+.transferdata h3, .fundsdata h3 {
+	padding: 0 5px;
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+.transferdata p, .fundsdata p {
+	text-align: center;
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+/*----------------------CONTENT - INSURANCE ----------------------*/
+/*----------------------CONTENT - DOWNLOAD ----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*----------------------FOOTER----------------------*/
