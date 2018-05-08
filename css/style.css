@@ -18,12 +18,36 @@ body {
 	flex-direction: column;
 }
 
+.button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 50%;
+    padding: 15px;
+    color: #505050;
+    background: none;
+    border: 1px solid #848484;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-family: Lato, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.button:hover {
+	background: #e0a419a1;
+    color: #313131;
+    border: 1px solid #e0a419a1;
+}
+
 .hide {
 	display: none;
 }
 
 .fadeout {
-	animation: fadeOut .4s;
+	animation: fadeOut .2s;
 }
 
 @keyframes fadeOut {
@@ -37,7 +61,7 @@ body {
 }
 
 .fadein {
-	animation: fadeIn .4s;
+	animation: fadeIn .8s;
 }
 
 @keyframes fadeIn {
@@ -178,6 +202,12 @@ p {
  	background: linear-gradient(to right, #8E8871, #453B28); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.contact {
+	background: #333333; /* fallback for old browsers */
+  	background: -webkit-linear-gradient(to right, #333333, #274046); /* Chrome 10-25, Safari 5.1-6 */
+ 	background: linear-gradient(to right, #333333, #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 
 .btn {
 	padding: 10px;
@@ -195,9 +225,9 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*    -webkit-transition: all 2.35s ease-in-out;
-  	-moz-transition: all 2.35s ease-in-out;
-  	transition: all 2.35s ease-in-out;*/
+    -webkit-transition: all .2s ease-in;
+  	-moz-transition: all .2s ease-in;
+  	transition: all .2s ease-in;
   	border: none;
 }
 
@@ -222,7 +252,6 @@ p {
   	-moz-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
-
 
 
 /*----------------------VERTICAL mENU----------------------*/
@@ -265,12 +294,16 @@ p {
 
 /*----------------------CONTENT----------------------*/
 
+.contenttitle {
+	flex:1;
+}
+
 .contenttitle h1{
 	margin: 48px 0 48px 0;
 	color: #777777;
 }
 
-.contentnews, .contentcrew, .contentprojects, .contentfunds, .contentinsurance, .contentdownload {
+.contentnews, .contentcrew, .contentprojects, .contentfunds, .contentinsurance, .contentdownload, .contentcontact {
 	display: none;
 	flex-direction: column;
 	height: auto;
@@ -370,18 +403,14 @@ p {
 	line-height: 32px;
 }
 
-.transferdata {
-
-}
-
-.transferdata h2, .fundsdata h2 {
+.transferdata h2, .fundsdata h2, .adressdata h2 {
 	font-family: Lato, sans-serif;
 	color: #777777;
 	font-size: 1.1em;
 	letter-spacing: 1px;
 }
 
-.transferdata h3, .fundsdata h3 {
+.transferdata h3, .fundsdata h3, .adressdata h3 {
 	padding: 0 5px;
 	font-family: Lato, sans-serif;
 	color: #777777;
@@ -389,7 +418,7 @@ p {
 	letter-spacing: 1px;
 }
 
-.transferdata p, .fundsdata p {
+.transferdata p, .fundsdata p, .adressdata p {
 	text-align: center;
 	font-family: Lato, sans-serif;
 	color: #777777;
@@ -400,42 +429,85 @@ p {
 /*----------------------CONTENT - INSURANCE ----------------------*/
 /*----------------------CONTENT - DOWNLOAD ----------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------FOOTER----------------------*/
-
-
-
-.contactform {
+.contentdownload {
 	display: none;
-    flex-direction: column;
-    align-items: left;
-    background-color: #d4d4d4;	
+	height: auto;
+	flex-direction: column;
 }
 
-.contact {
-	background-color: #fffffff5;
+.contentdownload .container{
+	flex-direction: column;
+}
+
+.files {
+	display: flex;
+}
+
+.filebox {
+	background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid #e8e8e8;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    padding: 20px 0;
+    box-shadow: 0px 3px 7px #cacaca;
+    text-align: center;
+}
+
+.pdficon {
 	flex:1;
 }
 
-.contactform .container {
+.filebox figcaption {
+	flex: 1;
+	font-family: Lato, sans-serif;
+	color: #777777;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+	padding: 10px 20px;
+}
+
+.filebox a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.linkbutton {
+	flex: 1;
+	width: 50%;
+}
+
+
+
+
+/*----------------------CONTENT - CONTACT ----------------------*/
+
+.contentcontact {
+	display: none;
+	height: auto;
+	flex-direction: column;
+}
+
+.contactbox {
+	display: flex;
+	align-items: center;
+}
+
+.contentcontact .container {
 	display: flex;
 	flex-direction: column;
+}
+
+.contactform {
+	display: flex;
+    flex: 1;
+    padding: 0 20px;
 }
 
 .contactform h1 {
@@ -445,20 +517,19 @@ p {
 }
 
 form {
-	padding: 20px;
+	flex: 1;
 }
 
 form .row {
 	display: flex;
-	flex-direction: column;
-	align-items: left;
-	text-align: left;
-	margin: 20px 0
+    flex-direction: column;
+    text-align: left;
+    margin: 20px 0;
 }
 
 form label, form button {
     font-size: 1em;
-    font-family: Opensans, sans-serif;
+    font-family: Lato, sans-serif;
     letter-spacing: 2px;
     color: #044040;
     text-align: left;
@@ -466,10 +537,9 @@ form label, form button {
 }
 
 form input, form textarea {
-	width: 50%;
     flex: 1;
     line-height: 30px;
-    border: 1px solid #044040;
+    border: 1px solid #848484;
     background: none;
     color: #044040;
     font-family: Lato, sans-serif;
@@ -484,22 +554,26 @@ textarea {
   overflow: auto;
 }
 
-form .sendbutton {
-	padding: 15px;
-	color: #044040;
-	background: none;
-	border: 1px solid #044040;
-	-webkit-transition: all 0.4s ease-in-out;
-  	-moz-transition: all 0.4s ease-in-out;
-  	transition: all 0.4s ease-in-out;
+.adresswrapper {
+    flex-direction: column;
+    flex: 1;
+    padding: 0 20px;
 }
 
-form .sendbutton:hover {
-	background: #006180;
-	color: #ffffff;
-	border: 1px solid #006180;
+.adressdata {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 0 30px 0;
 }
 
+.adressdata p {
+	margin: 0;
+	padding: 0;
+}
+
+/*----------------------FOOTER----------------------*/
 
 .resize {
 	width: 100%;
