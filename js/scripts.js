@@ -25,6 +25,13 @@
 
 			for (var i = 0 ; i < frontButtons.length ; i++) {
 		 	frontButtons[i].addEventListener('click' , showHorizontalMenu );
+		 	frontButtons[0].addEventListener('click' , crewBtnClicked );
+		 	frontButtons[1].addEventListener('click' , crewBtnClicked );
+		 	frontButtons[2].addEventListener('click' , crewBtnClicked );
+		 	frontButtons[3].addEventListener('click' , fundsBtnClicked );
+		 	frontButtons[4].addEventListener('click' , crewBtnClicked );
+		 	frontButtons[5].addEventListener('click' , downloadBtnClicked );
+		 	frontButtons[6].addEventListener('click' , contactBtnClicked );
 			}
 
 		function hideMenu() {
