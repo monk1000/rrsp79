@@ -92,7 +92,7 @@ header {
 
 .headerpic:before {
 	content: "";
-    background-color: rgba(0, 0, 0, 0.56);
+    background-color: rgba(0, 0, 0, 0.36);
     width: 100%;
     margin: 0;
     height: 20vh;
@@ -141,9 +141,9 @@ h5 {
 	margin: 10px 0;
 }
 
-section {
+/*section {
 	width: 100%;
-}
+}*/
 
 p {
 	padding: 20px;
@@ -153,7 +153,11 @@ p {
 	padding: 30px 0;
 }
 
-/*----------------------BUTTONS----------------------*/
+.hamburgermenu {
+	display: none;
+}
+
+/*----------------------MAIN MENU----------------------*/
 
 .menu {
     display: flex;
@@ -254,7 +258,7 @@ p {
 }
 
 
-/*----------------------VERTICAL mENU----------------------*/
+/*----------------------HORIZONTAL MENU----------------------*/
 
 .horizontalmenu {
 	position: absolute;
@@ -295,7 +299,7 @@ p {
 /*----------------------CONTENT----------------------*/
 
 .contenttitle {
-	flex:1;
+	flex: 1;
 }
 
 .contenttitle h1{
@@ -575,14 +579,222 @@ textarea {
 
 /*----------------------FOOTER----------------------*/
 
-.resize {
+
+/*----------------------SMALLER SCREENS----------------------*/
+/*----------------------DIFFERENT RESOLUTIONS----------------------*/
+
+@media screen and (max-width: 480px) {
+  
+body {
+	box-sizing: border-box;
 	width: 100%;
-	-webkit-transition: all 1s ease-in-out;
-  	-moz-transition: all 1s ease-in-out;
-  	transition: all 1s ease-in-out;
+	margin: 0;
+	position: absolute;
+	overflow-x: auto;
 }
 
-.newscontent {
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+}	
+
+header {
+	height: 17vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.headerpic:before {
+	height: 17vh;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 5;
 	flex: 1;
 }
 
+.heading h2, .heading h4  {
+	flex: 1;
+}
+
+.heading h2 {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.heading h4 {
+	font-size: 0.6em;
+	padding: 20px 0 0 0;
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+}
+
+/*----------------------hamburger MENU----------------------*/
+
+.hamburgermenu {
+	display: flex;
+	flex: 1;
+    width: 100%;
+    z-index: 25;    
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger {
+	display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #929292;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 26;
+}
+
+/*----------------------HORIZONTAL MENU----------------------*/
+
+.horizontalmenu {
+	display: none;
+    position: relative;
+    top: 17vh;
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    border-top: 1px solid white;
+    z-index: 1;
+}
+
+.icons {
+	display: flex;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.menuicon {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.mainmenu {
+	margin: 7vh auto;
+}
+
+.menubtn h5 {
+	font-size: 0.8em;
+	letter-spacing: 2px;
+}
+
+.rollup {
+
+}
+
+
+/*----------------------MAIN MENU----------------------*/
+
+.mainmenu {
+	display: none;
+}
+
+/*----------------------CONTENT----------------------*/
+
+.contenttitle {
+	flex: 1;
+	padding: 0 28px;
+}
+
+.contenttitle h1{
+	text-align: center;
+	font-size: 1.2em;
+	padding: 0 28px;
+}
+
+.contentnews, .contentcrew, .contentprojects, .contentfunds, .contentinsurance, .contentdownload, .contentcontact {
+  	top: 150px;
+    margin-bottom: 100px;
+}
+
+/*----------------------CONTENT - CREW ----------------------*/
+
+.contentcrew .container {
+	flex-direction: column;	
+}
+
+.people {
+	flex-direction: column;
+}
+
+
+/*----------------------CONTENT - FUNDS ----------------------*/
+
+.fundsdata {
+	display: flex;
+	flex-direction: column;
+}
+
+.transferdata h2, .fundsdata h2, .adressdata h2 {
+	text-align: center;
+}
+
+/*----------------------CONTENT - DOWNLOAD ----------------------*/
+
+.contentdownload {
+	display: none;
+	height: auto;
+	flex-direction: column;
+}
+
+.contentdownload .container{
+	flex-direction: column;
+}
+
+.files {
+	display: flex;
+	flex-direction: column;
+}
+
+.filebox {
+  	margin: 3% 5%;
+}
+
+.linkbutton {
+	width: 100%;
+}
+
+
+/*----------------------CONTENT - CONTACT ----------------------*/
+
+.contactbox {
+	flex-direction: column;
+}
+
+.contentcontact .container {
+	flex-direction: column;
+}
+
+.contactform {
+    width: 100%;
+}
+
+form {
+	flex: 1;
+	padding: 0 28px;
+}
+
+}

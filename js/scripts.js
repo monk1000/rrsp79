@@ -52,10 +52,6 @@
 		 		frontButtons[i].addEventListener('click' , hideMenu );
 			}
 
-			frontButtons[1].addEventListener('click' , crewBtnClicked );
-			
-			
-
 			// Horizontal Menu Menagment
 		
 			function crewBtnClicked() {
@@ -109,6 +105,37 @@
 			}
 			contentContact.classList.add('fadein');
 			contactBtnClick;
-			
 
-			
+			var phoneRes = window.matchMedia("(max-width: 480px)");
+			var hamburgerBtn = document.getElementById('hamburgerbtn');
+		
+
+
+		function changeRes(phoneRes) {
+		    if (phoneRes.matches) { // If media query matches
+		        function rollupHorizontalMenu() {
+						if (horizontalMenu.style.display === "none" || horizontalMenu.style.display == '') {
+							horizontalMenu.classList.add('fadein');
+							horizontalMenu.style.display = "flex";
+						} else {
+							horizontalMenu.style.display = "none";
+							horizontalMenu.classList.add('fadeout');
+						}
+				}
+
+					hamburgerBtn.addEventListener('click' , rollupHorizontalMenu );
+
+					for (var i = 0 ; i < menuIconBtn.length ; i++) {
+				 		menuIconBtn[i].addEventListener('click' , rollupHorizontalMenu );
+				 		menuIconBtn[0].addEventListener('click' , crewBtnClicked );
+				 		menuIconBtn[1].addEventListener('click' , crewBtnClicked );
+					 	menuIconBtn[2].addEventListener('click' , crewBtnClicked );
+					 	menuIconBtn[3].addEventListener('click' , fundsBtnClicked );
+					 	menuIconBtn[4].addEventListener('click' , crewBtnClicked );
+					 	menuIconBtn[5].addEventListener('click' , downloadBtnClicked );
+					 	menuIconBtn[6].addEventListener('click' , contactBtnClicked );
+					}			
+		    } 
+		}
+
+		changeRes(phoneRes); // Call listener function at run time
