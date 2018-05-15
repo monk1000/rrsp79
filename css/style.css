@@ -18,6 +18,11 @@ body {
 	flex-direction: column;
 }
 
+button {
+	border: none;
+	outline: none;
+}
+
 .button {
     flex: 1;
     display: flex;
@@ -287,13 +292,26 @@ p {
 	align-items: center;
 	cursor: pointer;
 }
-.mainmenu {
-	margin: 7vh auto;
+
+.menuicon h5 {
+	font-size: 0.8em;
+	letter-spacing: 1px;
+	font-family: Lato, sans-serif;
 }
 
-.menubtn h5 {
-	font-size: 0.8em;
-	letter-spacing: 2px;
+.menuicon:hover h5 {
+	color: #ffd228;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menuicon:focus h5 {
+	color: #ffd228;
+}
+
+.mainmenu {
+	margin: 7vh auto;
 }
 
 /*----------------------CONTENT----------------------*/
