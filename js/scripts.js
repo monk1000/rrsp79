@@ -107,12 +107,12 @@
 			contactBtnClick;
 
 			var phoneRes = window.matchMedia("(max-width: 480px)");
+			var tabletRes = window.matchMedia("(min-width: 481px)");
 			var hamburgerBtn = document.getElementById('hamburgerbtn');
-		
+	
 
-
-		function changeRes(phoneRes) {
-		    if (phoneRes.matches) { // If media query matches
+		function phoneScreen(phoneRes, tabletRes) {
+		    if (phoneRes.matches ^ tabletRes.matches) { // If media query matches
 		        function rollupHorizontalMenu() {
 						if (horizontalMenu.style.display === "none" || horizontalMenu.style.display == '') {
 							horizontalMenu.classList.add('fadein');
@@ -122,6 +122,18 @@
 							horizontalMenu.classList.add('fadeout');
 						}
 				}
+		
+		// function tabletScreen(tabletRes) {
+		//     if (tabletRes.matches || ) { // If media query matches
+		//         function rollupHorizontalMenu() {
+		// 				if (horizontalMenu.style.display === "none" || horizontalMenu.style.display == '') {
+		// 					horizontalMenu.classList.add('fadein');
+		// 					horizontalMenu.style.display = "flex";
+		// 				} else {
+		// 					horizontalMenu.style.display = "none";
+		// 					horizontalMenu.classList.add('fadeout');
+		// 				}
+		// 		}
 
 					hamburgerBtn.addEventListener('click' , rollupHorizontalMenu );
 
@@ -138,4 +150,6 @@
 		    } 
 		}
 
-		changeRes(phoneRes); // Call listener function at run time
+
+		phoneScreen(phoneRes, tabletRes); // Call listener function at run time
+		
